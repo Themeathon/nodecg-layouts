@@ -1,4 +1,4 @@
-import type { Bids, Commentators, CurrentRunDelay, DelayedTimer, DonationReader, GameLayouts, MediaBox, NameCycle, NotableDonations, Prizes, TaskmasterTimestamps } from '@esa-layouts/types/schemas'; // eslint-disable-line object-curly-newline, max-len
+import type { Bids, Commentators, CurrentRunDelay, DelayedTimer, DonationReader, GameLayouts, MediaBox, NameCycle, NotableDonations, OmnibarMemeImage, Prizes, TaskmasterTimestamps } from '@esa-layouts/types/schemas'; // eslint-disable-line object-curly-newline, max-len
 import type NodeCGTypes from '@nodecg/types';
 import clone from 'clone';
 import { SpeedcontrolUtilBrowser } from 'speedcontrol-util';
@@ -21,6 +21,7 @@ const reps: {
   mediaBoxImages: NodeCGTypes.ClientReplicant<NodeCGTypes.AssetFile[]>;
   nameCycle: NodeCGTypes.ClientReplicant<NameCycle>;
   notableDonations: NodeCGTypes.ClientReplicant<NotableDonations>;
+  omnibarMemeImage: NodeCGTypes.ClientReplicant<OmnibarMemeImage>;
   prizes: NodeCGTypes.ClientReplicant<Prizes>;
   runDataActiveRun: NodeCGTypes.ClientReplicant<RunDataActiveRun>;
   taskmasterTimestamps: NodeCGTypes.ClientReplicant<TaskmasterTimestamps>;
@@ -37,6 +38,7 @@ const reps: {
   mediaBoxImages: nodecg.Replicant('assets:media-box-images'),
   nameCycle: nodecg.Replicant('nameCycle'),
   notableDonations: nodecg.Replicant('notableDonations'),
+  omnibarMemeImage: nodecg.Replicant('omnibarMemeImage'),
   prizes: nodecg.Replicant('prizes'),
   runDataActiveRun: sc.runDataActiveRun,
   taskmasterTimestamps: nodecg.Replicant('taskmasterTimestamps'),

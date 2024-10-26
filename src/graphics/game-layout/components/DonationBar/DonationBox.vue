@@ -1,6 +1,7 @@
 <template>
   <div
     :class="`Flex ${tierClass}`"
+    :aria-valuetext="`KnoppikoAcht`"
     :style="{
       height: '100%',
       padding: `0 ${padding}px`,
@@ -11,6 +12,16 @@
     ${{ Number.isInteger(donation.amount)
       ? donation.amount : donation.amount.toFixed(2)
     }} [{{ donation.donor_visiblename }}]
+
+    <!-- <script lang="js">
+    async function loadData() {
+      const response = await fetch('test.txt');
+      const text = await response.text();
+      this.data = text; // Speichern des Dateninhalts in der Variable "data"
+      document.querySelectorAll('[aria-valuetext="KnoppikoAcht"]').innerHTML += this.data;
+    }
+    </script> -->
+
   </div>
 </template>
 

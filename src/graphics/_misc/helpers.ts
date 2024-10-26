@@ -29,8 +29,34 @@ export function msToTimeStr(ms: number): string {
   const minutes = Math.floor((ms / (1000 * 60)) % 60);
   const hours = Math.floor(ms / (1000 * 60 * 60));
   return `${padTimeNumber(hours)
-  }:${padTimeNumber(minutes)
-  }:${padTimeNumber(seconds)}`;
+    }:${padTimeNumber(minutes)
+    }:${padTimeNumber(seconds)}`;
+}
+
+/**
+ * Simple formatter for displaying currency amounts.
+ * @param amount Amount as a integer/float.
+ * @param _symbol The currency symbol (defaults to what's set in the config)
+ * @param _countryCode The country code (defaults to what's set in the config)
+ */
+export function formatCurrency(
+  amount: number,
+  _symbol?: string,
+  _countryCode?: string,
+): string {
+  const cfg = (config as DeepWritable<Configschema>).event.currency;
+  const symbol = _symbol || cfg.symbol;
+  const countryCode = _countryCode || cfg.countryCode;
+
+  if (amount >= 100) {
+    return `${symbol}${Math.floor(amount).toLocaleString(
+      countryCode,
+      {
+        maximumFractionDigits: 0,
+      },
+    )}`;
+  }
+  return `${symbol}${amount.toFixed(2)}`;
 }
 
 /**
@@ -38,10 +64,10 @@ export function msToTimeStr(ms: number): string {
  * @param amount Amount as a integer/float.
  */
 export function formatUSD(amount: number): string {
-  if (amount >= 100) {
-    return `$${Math.floor(amount).toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
-  }
-  return `$${amount.toFixed(2)}`;
+  return formatCurrency(amount);
+
+  // We would use this as the fallback, but we have overrides in the config now
+  // return formatCurrency(amount, '$', 'en-US');
 }
 
 /**

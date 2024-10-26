@@ -6,6 +6,8 @@ export * from './bids';
 // @ts-ignore
 export * from './bigbuttonPlayerMap';
 // @ts-ignore
+export * from './bundles';
+// @ts-ignore
 export * from './capturePositions';
 // @ts-ignore
 export * from './commentators';
@@ -28,6 +30,8 @@ export * from './donationTotalMilestones';
 // @ts-ignore
 export * from './gameLayouts';
 // @ts-ignore
+export * from './graphics%3Ainstances';
+// @ts-ignore
 export * from './intermissionSlides';
 // @ts-ignore
 export * from './mediaBox';
@@ -42,6 +46,8 @@ export * from './obsData';
 // @ts-ignore
 export * from './omnibar';
 // @ts-ignore
+export * from './omnibarMemeImage';
+// @ts-ignore
 export * from './otherStreamData';
 // @ts-ignore
 export * from './prizes';
@@ -49,6 +55,8 @@ export * from './prizes';
 export * from './readerIntroduction';
 // @ts-ignore
 export * from './serverTimestamp';
+// @ts-ignore
+export * from './soundCues';
 // @ts-ignore
 export * from './streamDeckData';
 // @ts-ignore

@@ -16,10 +16,22 @@ const { default: summer } = require('./themes/summer.theme.css');
 const { default: winter } = require('./themes/winter.theme.css');
 const { default: legends } = require('./themes/legends.theme.css');
 const { default: swcf } = require('./themes/swcf.theme.css');
+const { default: nsgspr24 } = require('./themes/nsgspr24.theme.css');
+const { default: themeat24 } = require('./themes/themeat24.theme.css');
+const { default: themeat_hal24 } = require('./themes/themeat-hal24.theme.css');
 
-defaultTheme.use();
+if (theme !== 'themeat-hal24') defaultTheme.use();
 
 switch (theme) {
+  case 'themeat-hal24':
+    themeat_hal24.use();
+    break;
+  case 'themeat24':
+    themeat24.use();
+    break;
+  case 'nsgspr24':
+    nsgspr24.use();
+    break;
   case 'together':
     together.use();
     break;

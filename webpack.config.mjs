@@ -157,7 +157,7 @@ const config = (name) => {
           ],
         },
         {
-          test: /\.(png|svg)?$/,
+          test: /\.(png|svg|gif|webp)?$/,
           type: 'asset/resource',
           generator: {
             filename: 'img/[name]-[contenthash][ext]',

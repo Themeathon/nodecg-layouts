@@ -28,7 +28,7 @@ export function getCookies(): NeedleResponse['cookies'] {
 async function getEventIDFromShort(short: string): Promise<number> {
   const resp = await needle(
     'get',
-    `https://${config.address}/search/?short=${short}&type=event`,
+    `https://${config.address}/tracker/search/?short=${short}&type=event`,
     cookies,
   );
   if (!resp.body.length) {
@@ -44,7 +44,7 @@ async function updateDonationTotalFromAPI(init = false): Promise<void> {
   try {
     let total = 0;
     for (const event of eventInfo) {
-      const resp = await needle('get', `https://${config.address}/${event.id}?json`);
+      const resp = await needle('get', `https://${config.address}/tracker/event/${event.id}?json`);
       if (resp.statusCode === 200) {
         const eventTotal = resp.body.agg.amount ? parseFloat(resp.body.agg.amount) : 0;
         event.total = eventTotal;
@@ -120,7 +120,7 @@ async function loginToTracker(): Promise<void> {
     );
 
     // If we're not being redirected or there's no session token, the login failed.
-    if (resp2.statusCode !== 302 || (resp2.cookies && !resp2.cookies.tracker_session)) {
+    if (resp2.statusCode !== 302 || (resp2.cookies && !resp2.cookies.sessionid)) {
       throw new Error('Log in was unsuccessful, is your username/password correct?');
     }
 

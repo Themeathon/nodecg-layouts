@@ -134,3 +134,6 @@ streamdeck-plugin/com.esamarathon.streamdeck.sdPlugin
 streamdeck-plugin/DistributionTool.exe
 *.psd
 /boxart/
+
+# Custom Themeathon ignores
+pnpm-lock.yaml

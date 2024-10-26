@@ -44,7 +44,7 @@
         left: '533px',
         top: '780px',
         width: '1387px',
-        height: '160px',
+        height: '220px',
       }"
     >
       <run-info
@@ -91,14 +91,14 @@
     />
 
     <!-- Donation Bar -->
-    <donation-bar
+    <!-- <donation-bar
       :style="{
         left: '0px',
         top: '940px',
         width: '1920px',
         height: '60px',
       }"
-    />
+    /> -->
   </div>
 </template>
 

@@ -13,7 +13,9 @@
       Prize Available: {{ prize.name }}
     </div>
     <div :style="{ 'font-size': '20px' }">
-      Provided by {{ prize.provided }}, minimum donation amount: ${{ prize.minimumBid.toFixed(2) }}
+      Provided by {{ prize.provided }}, minimum donation amount: {{ symbol }}{{
+        prize.minimumBid.toFixed(2)
+      }}
       (donate in the next {{ timeUntilString }})
     </div>
   </div>
@@ -57,6 +59,10 @@ export default class extends Vue {
     return this.prize.endTime
       ? dayjs.unix(this.prize.endTime / 1000).utc().locale('en-prizes').fromNow(true)
       : '';
+  }
+
+  get symbol(): string {
+    return nodecg.bundleConfig.event.currency.symbol || '$';
   }
 
   async created(): Promise<void> {

@@ -94,12 +94,33 @@
         "fallbackTwitchTitle": {
           "$comment": "Set the fallback Twitch title for this event; {{total}} and {{run}} can be used as placeholders (see source code).",
           "type": "string"
+        },
+        "currency": {
+          "$comment": "Overrides for the currency symbol and country code used in various graphics",
+          "additionalProperties": false,
+          "properties": {
+            "symbol": {
+              "$comment": "The currency symbol (defaults to $)",
+              "type": "string",
+              "default": "$"
+            },
+            "countryCode": {
+              "$comment": "The country code (defaults to en-US)",
+              "type": "string",
+              "default": "en-US"
+            }
+          },
+          "required": [
+            "symbol",
+            "countryCode"
+          ]
         }
       },
       "required": [
         "shorts",
         "thisEvent",
-        "online"
+        "online",
+        "currency"
       ]
     },
     "omnibar": {
@@ -356,7 +377,7 @@
               ]
             },
             "groups": {
-              "type":  "object",
+              "type": "object",
               "additionalProperties": false,
               "properties": {
                 "gameCaptures": {

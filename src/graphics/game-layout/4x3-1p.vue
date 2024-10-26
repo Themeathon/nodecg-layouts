@@ -8,7 +8,7 @@
         left: '668px',
         top: '0px',
         width: '1252px',
-        height: '940px',
+        height: '1000px',
       }"
     />
 
@@ -76,7 +76,7 @@
     />
 
     <!-- Donation Bar -->
-    <donation-bar
+    <!-- <donation-bar
       class="BorderLeft"
       :style="{
         left: '668px',
@@ -84,7 +84,7 @@
         width: '1252px',
         height: '60px',
       }"
-    />
+    /> -->
   </div>
 </template>
 

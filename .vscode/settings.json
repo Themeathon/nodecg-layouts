@@ -1,7 +1,10 @@
 {
-  "eslint.workingDirectories": [
-    "shared",
-    "streamdeck-plugin"
-  ],
-  "typescript.tsdk": "node_modules\\typescript\\lib"
+	"eslint.workingDirectories": [
+		"shared",
+		"streamdeck-plugin"
+	],
+	"typescript.tsdk": "node_modules\\typescript\\lib",
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"editor.insertSpaces": true
 }

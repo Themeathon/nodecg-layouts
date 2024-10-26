@@ -1,4 +1,4 @@
-import type { Bids, BigbuttonPlayerMap, Commentators, Countdown, CurrentRunDelay, DonationAlerts, DonationReader, DonationTotal, DonationTotalMilestones, DonationsToRead, GameLayouts, IntermissionSlides, ObsData, Omnibar, OtherStreamData, Prizes, ReaderIntroduction, ServerTimestamp, StreamDeckData, TtsVoices, UpcomingRunID, VideoPlayer } from '@esa-layouts/types/schemas';
+import type { Bids, BigbuttonPlayerMap, Commentators, Countdown, CurrentRunDelay, DonationAlerts, DonationReader, DonationTotal, DonationTotalMilestones, DonationsToRead, GameLayouts, IntermissionSlides, ObsData, Omnibar, OmnibarMemeImage, OtherStreamData, Prizes, ReaderIntroduction, ServerTimestamp, StreamDeckData, TtsVoices, UpcomingRunID, VideoPlayer } from '@esa-layouts/types/schemas';
 import type NodeCGTypes from '@nodecg/types';
 import clone from 'clone';
 import { SpeedcontrolUtilBrowser } from 'speedcontrol-util';
@@ -30,6 +30,7 @@ export const reps: {
   intermissionSlides: NodeCGTypes.ClientReplicant<IntermissionSlides>;
   obsData: NodeCGTypes.ClientReplicant<ObsData>;
   omnibar: NodeCGTypes.ClientReplicant<Omnibar>;
+  omnibarMemeImage: NodeCGTypes.ClientReplicant<OmnibarMemeImage>;
   otherStreamData: NodeCGTypes.ClientReplicant<OtherStreamData>;
   prizes: NodeCGTypes.ClientReplicant<Prizes>;
   readerIntroduction: NodeCGTypes.ClientReplicant<ReaderIntroduction>;
@@ -61,6 +62,7 @@ export const reps: {
   intermissionSlides: nodecg.Replicant('intermissionSlides'),
   obsData: nodecg.Replicant('obsData'),
   omnibar: nodecg.Replicant('omnibar'),
+  omnibarMemeImage: nodecg.Replicant('omnibarMemeImage'),
   otherStreamData: nodecg.Replicant('otherStreamData'),
   prizes: nodecg.Replicant('prizes'),
   readerIntroduction: nodecg.Replicant('readerIntroduction'),
@@ -94,6 +96,7 @@ export interface ReplicantTypes {
   intermissionSlides: IntermissionSlides;
   obsData: ObsData;
   omnibar: Omnibar;
+  omnibarMemeImage: OmnibarMemeImage;
   otherStreamData: OtherStreamData;
   prizes: Prizes;
   readerIntroduction: ReaderIntroduction;

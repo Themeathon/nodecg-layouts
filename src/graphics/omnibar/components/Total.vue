@@ -1,9 +1,22 @@
 <template>
+  <img
+    v-if="theme === 'themeat24'"
+    id="CharityLogo"
+    :style="{
+      opacity: showAlert ? 0.3 : 1,
+      transition: 'opacity 0.5s',
+      'background': memeImageBackground,
+      'background-size': 'contain',
+      'background-repeat': 'round round'
+    }"
+  >
   <div
+    v-else
     class="Flex"
     :style="{
-      'margin-right': theme === 'swcf' ? '10px' : '20px',
+      'margin-right': flexMargin,
        overflow: 'hidden',
+       'align-items': 'center !important'
     }"
   >
     <!-- Alert sound effect. -->
@@ -20,7 +33,7 @@
         }"
       >
         <img
-          src="./img/RetroCoin.png"
+          src="./img/CoinFaster.gif"
           :style="{
             height: '40px',
             'image-rendering': 'pixelated',
@@ -54,7 +67,7 @@
         <span
           v-for="(char, i) in totalStr"
           :key="i"
-          :class="(char === ',' ? 'Comma' : undefined)"
+          :class="getClassForChar(char)"
         >
           {{ char }}
         </span>
@@ -90,7 +103,7 @@
 
         >
           <img
-            src="./img/RetroCoin.png"
+            src="./img/CoinFaster.gif"
             :style="{
               height: '30px',
               'image-rendering': 'pixelated',
@@ -124,7 +137,7 @@
         <span
           v-for="(char, i) in totalStr"
           :key="i"
-          :class="(char === ',' ? 'Comma' : undefined)"
+          :class="getClassForChar(char)"
         >
           {{ char }}
         </span>
@@ -138,6 +151,7 @@ import { replicantModule } from '@esa-layouts/browser_shared/replicant_store';
 import { formatUSD } from '@esa-layouts/graphics/_misc/helpers';
 import gsap from 'gsap';
 import { Component, Vue, Watch } from 'vue-property-decorator';
+import { OmnibarMemeImage } from '@esa-layouts/types/schemas';
 
 @Component
 export default class extends Vue {
@@ -148,18 +162,51 @@ export default class extends Vue {
   showAlert = false;
   alertText = '$0';
   alertList: { total: number, amount: number }[] = [];
+  memeImage = '';
 
   get rawTotal(): number {
     return replicantModule.repsTyped.donationTotal;
   }
 
+  get omnibarMemeImage(): OmnibarMemeImage {
+    return replicantModule.repsTyped.omnibarMemeImage;
+  }
+
   get totalStr(): string {
     // "Reset" value every 10k, specific to ESA Legends 2023.
+    const { symbol } = nodecg.bundleConfig.event.currency;
+    const { countryCode } = nodecg.bundleConfig.event.currency;
+
     const esal23 = nodecg.bundleConfig.event.shorts === 'esal23';
-    return `$${Math.floor(esal23 ? this.total % 10000 : this.total).toLocaleString('en-US', {
-      maximumFractionDigits: 0,
-      minimumIntegerDigits: esal23 && this.total >= 10000 ? 4 : undefined,
-    })}`;
+
+    return `${symbol}${
+      Math.floor(esal23 ? this.total % 10000 : this.total).toLocaleString(countryCode, {
+        maximumFractionDigits: 0,
+        minimumIntegerDigits: esal23 && this.total >= 10000 ? 4 : undefined,
+      })}`;
+  }
+
+  get flexMargin(): string {
+    switch (this.theme) {
+      case 'swcf':
+        return '10px';
+      case 'themeat24':
+        return '0';
+      default:
+        return '20px';
+    }
+  }
+
+  get memeImageBackground(): string {
+    return `url(${this.omnibarMemeImage})`;
+  }
+
+  getClassForChar(char: string): string | undefined {
+    if ([' ', ',', '.'].includes(char)) return 'Comma';
+
+    if (char >= '0' && char <= '9') return 'Number';
+
+    return undefined;
   }
 
   async playNextAlert(start = false): Promise<void> {
@@ -192,6 +239,11 @@ export default class extends Vue {
     if (!this.playingAlerts) this.playNextAlert(true);
   }
 
+  @Watch('omnibarMemeImage')
+  onOmnibarMemeImageChange(newVal: OmnibarMemeImage): void {
+    this.memeImage = newVal;
+  }
+
   async created(): Promise<void> {
     this.total = this.rawTotal;
   }
@@ -202,10 +254,14 @@ export default class extends Vue {
   /* Each character in the total is in a span; setting width so the numbers appear monospaced. */
   #Total > span {
     display: inline-block;
-    width: 0.45em;
+    width: 0.4em;
     text-align: center;
   }
-  #Total > .Comma {
+  #Total > .Number {
+    width: 0.45em;
+  }
+  #Total > .Comma,
+  #Total > .Space {
     width: 0.22em;
   }
 </style>

@@ -6,7 +6,7 @@ import * as mqLogging from './util/mq-logging';
 import { get as nodecg } from './util/nodecg';
 import obs from './util/obs';
 import { mq } from './util/rabbitmq';
-import { bigbuttonPlayerMap, commentators, donationReader, donationTotal, horaroImportStatus, oengusImportStatus, otherStreamData, serverTimestamp, twitchAPIData, twitchChannelInfo, upcomingRunID } from './util/replicants';
+import { bigbuttonPlayerMap, commentators, donationReader, donationTotal, horaroImportStatus, oengusImportStatus, omnibarMemeImage, otherStreamData, serverTimestamp, twitchAPIData, twitchChannelInfo, upcomingRunID } from './util/replicants';
 import { sc } from './util/speedcontrol';
 
 const config = nodecg().bundleConfig;
@@ -146,6 +146,18 @@ nodecg().listenFor('commentatorAdd', async (val: string | null | undefined, ack)
 
 nodecg().listenFor('commentatorRemove', (val: number, ack) => {
   commentators.value.splice(val, 1);
+  if (ack && !ack.handled) {
+    ack(null);
+  }
+});
+
+// Modify meme image lmao
+nodecg().listenFor('omnibarMemeImageModify', async (val: string | null | undefined, ack) => {
+  if (!val) {
+    omnibarMemeImage.value = '';
+  } else {
+    omnibarMemeImage.value = val;
+  }
   if (ack && !ack.handled) {
     ack(null);
   }

@@ -22,7 +22,7 @@
         'font-weight': 500,
       }"
     >
-      <template v-if="showReader">Reader</template>
+      <template v-if="showReader">Host</template>
       <template v-else>
         <template v-if="comms.length > 1">Commentators</template>
         <template v-else>Commentator</template>

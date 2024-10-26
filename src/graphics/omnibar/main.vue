@@ -25,8 +25,10 @@
       <img id="Logo"><!-- Logo -->
       <divider />
       <total /><!-- Donation Total -->
-      <divider />
-      <ticker /><!-- Ticker -->
+      <template v-if="theme !== 'themeat24'">
+        <divider />
+        <ticker /><!-- Ticker -->
+      </template>
       <divider />
       <clock /><!-- Clock -->
     </template>

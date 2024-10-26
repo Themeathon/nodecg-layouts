@@ -13,6 +13,10 @@ export interface Configschema {
 		thisEvent: number;
 		online: boolean | ('partial' | 'full');
 		fallbackTwitchTitle?: string;
+		currency: {
+			symbol: string;
+			countryCode: string;
+		};
 	};
 	omnibar: {
 		miniCredits: {

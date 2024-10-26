@@ -65,6 +65,11 @@ const routes = [
     component: List.L_4x3_4p,
   },
   {
+    name: '5:4 1 Player',
+    path: '/5x4-1p',
+    component: List.L_5x4_1p,
+  },
+  {
     name: '16:9 1 Player',
     path: '/16x9-1p',
     component: List.L_16x9_1p,
