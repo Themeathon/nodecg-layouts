@@ -1,6 +1,3 @@
-import { Configschema } from '@themeathon-layouts/types/schemas';
-import { DeepWritable } from 'ts-essentials';
-
 const config = nodecg.bundleConfig;
 
 /**
@@ -33,7 +30,7 @@ export function formatCurrency(
   amount: number,
   _symbol?: string,
 ): string {
-  const cfg = (config as DeepWritable<Configschema>).event.currency;
+  const cfg = config.event.currency;
   const symbol = _symbol || cfg.symbol;
 
   return `${symbol}${amount.toFixed(2)}`;

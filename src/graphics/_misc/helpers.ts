@@ -44,7 +44,7 @@ export function formatCurrency(
   _symbol?: string,
   _countryCode?: string,
 ): string {
-  const cfg = (config as DeepWritable<Configschema>).event.currency;
+  const cfg = config.event.currency;
   const symbol = _symbol || cfg.symbol;
   const countryCode = _countryCode || cfg.countryCode;
 
