@@ -41,7 +41,6 @@
     "module-alias": "^2.2.3",
     "needle": "^3.3.1",
     "sharp": "^0.33.2",
-    "socket.io-client": "^4.7.4",
     "speedcontrol-util": "github:speedcontrol/speedcontrol-util.git#build",
     "streamdeck-util": "^0.4.0",
     "uuid": "^9.0.1"

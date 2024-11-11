@@ -6,7 +6,6 @@ import needle from 'needle';
 import { join } from 'path';
 import { get as nodecg } from './util/nodecg';
 import obs from './util/obs';
-import offsite from './util/offsite';
 import { assetsReaderIntroductionImages, obsData, readerIntroduction } from './util/replicants';
 import { sc } from './util/speedcontrol';
 import sd from './util/streamdeck';
@@ -117,22 +116,12 @@ function changeAdvanceSlideSDTitle(i?: number): void {
 }
 
 /**
- * Correctly changes the title text on the offsite "Advance Slide" buttons.
- * @param i The index you wish to force this to display, 0-based.
- */
-function changeAdvanceSlideOffsiteTitle(i?: number): void {
-  const title = generateAdvanceSlideTitle(false, i);
-  offsite.emit('title', { name: 'slidesAdvance', title });
-}
-
-/**
  * Resets the temporarily stored assets ands the current slide value.
  */
 function reset(): void {
   assetsTemp = assetsSorted();
   readerIntroduction.value.current = assetsTemp[0]?.sum || 'RunInfo';
   changeAdvanceSlideSDTitle();
-  changeAdvanceSlideOffsiteTitle();
 }
 
 /**
@@ -150,7 +139,6 @@ function showNext(): boolean {
       readerIntroduction.value.current = 'RunInfo';
     }
     changeAdvanceSlideSDTitle(index + 1);
-    changeAdvanceSlideOffsiteTitle();
     return true;
   }
   return false;
@@ -177,7 +165,6 @@ assetsReaderIntroductionImages.on('change', (newVal) => {
 obsData.on('change', (newVal, oldVal) => {
   if (newVal.scene !== oldVal?.scene) {
     changeAdvanceSlideSDTitle();
-    changeAdvanceSlideOffsiteTitle();
   }
 });
 
@@ -203,22 +190,4 @@ sd.on('keyUp', (data) => {
     reset();
     sd.send({ event: 'showOk', context: data.context });
   }
-});
-
-offsite.on('authenticated', () => {
-  changeAdvanceSlideOffsiteTitle();
-});
-
-// Offsite reader controls.
-offsite.on('slidesAdvance', () => {
-  const success = showNext();
-  offsite.emit('ack', {
-    name: 'slidesAdvance',
-    success,
-    title: generateAdvanceSlideTitle(false),
-  });
-});
-offsite.on('slidesReset', () => {
-  reset();
-  offsite.emit('ack', { name: 'slidesReset', success: true });
 });

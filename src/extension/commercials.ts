@@ -5,7 +5,6 @@
 
 import { padTimeNumber, wait } from './util/helpers';
 import { get as nodecg } from './util/nodecg';
-import offsite from './util/offsite';
 import { sc } from './util/speedcontrol';
 import sd from './util/streamdeck';
 
@@ -44,14 +43,6 @@ function changeDisableCommercialsSDTitle(): void {
   sd.setTextOnAllButtonsWithAction('com.esamarathon.streamdeck.twitchads', text);
 }
 
-/**
- * Correctly changes the title text on the offsite "Disbale Twitch Commercials" buttons.
- */
-function changeDisableCommercialsOffsiteTitle(): void {
-  const title = generateDisableCommercialsTitle(false);
-  offsite.emit('title', { name: 'commercialsDisable', title });
-}
-
 async function setup(): Promise<void> {
   // 10s check to see if esa-commercials is available alongside this bundle.
   // Doing it this way because we can't specificy both in bundleDependencies and need to check.
@@ -67,16 +58,13 @@ async function setup(): Promise<void> {
     sc.timer.on('change', (newVal, oldVal) => {
       if (newVal.state !== oldVal?.state) {
         changeDisableCommercialsSDTitle();
-        changeDisableCommercialsOffsiteTitle();
       }
     });
     disabled.on('change', () => {
       changeDisableCommercialsSDTitle();
-      changeDisableCommercialsOffsiteTitle();
     });
     sc.twitchCommercialTimer.on('change', () => {
       changeDisableCommercialsSDTitle();
-      changeDisableCommercialsOffsiteTitle();
     });
 
     // What to do once Stream Deck connection is initialised.
@@ -102,23 +90,6 @@ async function setup(): Promise<void> {
         changeDisableCommercialsSDTitle();
         await wait(100); // Hopefully stop a race condition so below "OK" displays.
         sd.send({ event: 'showOk', context: data.context });
-      }
-    });
-
-    offsite.on('authenticated', () => {
-      changeDisableCommercialsOffsiteTitle();
-    });
-
-    offsite.on('commercialsDisable', () => {
-      if (!disabled.value && !['stopped', 'finished'].includes(sc.timer.value.state)) {
-        // Sends a message to the esa-commercials bundle.
-        // Because we are using server-to-server messages, no confirmation yet.
-        nodecg().sendMessageToBundle('disable', 'esa-commercials');
-        offsite.emit('ack', {
-          name: 'commercialsDisable',
-          success: true,
-          title: generateDisableCommercialsTitle(false),
-        });
       }
     });
   }

@@ -110,11 +110,6 @@ export interface Configschema {
 			name: string;
 		}[];
 	};
-	offsite: {
-		enabled: boolean;
-		address: string;
-		key: string;
-	};
 	server: {
 		enabled: boolean;
 		address: string;

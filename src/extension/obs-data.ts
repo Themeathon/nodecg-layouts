@@ -4,7 +4,6 @@ import { startPlaylist } from './intermission-player';
 import * as mqLogging from './util/mq-logging';
 import { get as nodecg } from './util/nodecg';
 import obs, { changeScene } from './util/obs';
-import offsite from './util/offsite';
 import { obsData, readerIntroduction, videoPlayer } from './util/replicants';
 import { sc } from './util/speedcontrol';
 import sd from './util/streamdeck';
@@ -51,14 +50,6 @@ function generateSceneCyclerTitle(linebreaks: boolean): string {
 function changeSceneCyclerSDTitle(): void {
   const text = generateSceneCyclerTitle(true);
   sd.setTextOnAllButtonsWithAction('com.esamarathon.streamdeck.scenecycler', text);
-}
-
-/**
- * Correctly changes the title text on the offsite "Scene Cycle" buttons.
- */
-function changeSceneCyclerOffsiteTitle(): void {
-  const title = generateSceneCyclerTitle(false);
-  offsite.emit('title', { name: 'sceneCycle', title });
 }
 
 /**
@@ -161,19 +152,16 @@ obsData.on('change', (newVal, oldVal) => {
   || newVal.scene !== oldVal.scene
   || newVal.connected !== oldVal.connected) {
     changeSceneCyclerSDTitle();
-    changeSceneCyclerOffsiteTitle();
   }
 });
 sc.timer.on('change', (newVal, oldVal) => {
   if (newVal.state !== oldVal?.state) {
     changeSceneCyclerSDTitle();
-    changeSceneCyclerOffsiteTitle();
   }
 });
 readerIntroduction.on('change', (newVal, oldVal) => {
   if (newVal.current !== oldVal?.current) {
     changeSceneCyclerSDTitle();
-    changeSceneCyclerOffsiteTitle();
   }
 });
 
@@ -223,13 +211,4 @@ sd.on('keyUp', async (data) => {
     const success = await cycleScene();
     if (success) sd.send({ event: 'showOk', context: data.context });
   }
-});
-
-offsite.on('authenticated', () => {
-  changeSceneCyclerOffsiteTitle();
-});
-
-offsite.on('sceneCycle', async () => {
-  const success = await cycleScene();
-  offsite.emit('ack', { name: 'sceneCycle', success, title: generateSceneCyclerTitle(false) });
 });
