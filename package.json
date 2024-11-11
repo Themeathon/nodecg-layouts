@@ -51,6 +51,7 @@
     "@fontsource/roboto": "^4.5.8",
     "@mdi/font": "^7.4.47",
     "@nodecg/types": "^2.1.12",
+    "@types/express": "^4",
     "@types/async": "^3.2.24",
     "@types/clone": "^2.1.4",
     "@types/lodash": "^4.14.202",
