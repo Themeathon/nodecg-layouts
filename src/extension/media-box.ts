@@ -1,4 +1,3 @@
-import { Client, Intents } from 'discord.js';
 import mb from './util/mediabox';
 import * as mqLogging from './util/mq-logging';
 import { get as nodecg } from './util/nodecg';
@@ -10,56 +9,6 @@ import obs from './util/obs';
  */
 
 const config = nodecg().bundleConfig;
-const discord = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-
-// Discord integration, used to listen for speedrunstore.com purchase notifications.
-if (config.discord.enabled) {
-  nodecg().log.info('[Media Box] Discord integration enabled');
-  discord.on('ready', async () => {
-    nodecg().log.info('[Media Box] Discord bot connection ready');
-  });
-  discord.on('error', () => {
-    nodecg().log.warn('[Media Box] Discord bot connection error');
-  });
-  discord.on('disconnect', () => {
-    nodecg().log.warn('[Media Box] Discord bot disconnected, will reconnect');
-    setTimeout(() => {
-      discord.login(config.discord.token);
-    }, 10 * 1000);
-  });
-  discord.on('messageCreate', (msg) => {
-    nodecg().log.debug(
-      '[Media Box] Received Discord "messageCreate" event, '
-        + 'id: %s - textChannelId: %s - webhookId: %s - content: %s',
-      msg.id,
-      msg.channelId,
-      msg.webhookId,
-      msg.content,
-    );
-    // if (msg.channelId === config.discord.textChannelId && msg.webhookId !== null) {
-    if (msg.channelId === config.discord.textChannelId) {
-      nodecg().log.debug(
-        '[Media Box] Discord message with ID %s came from the correct channel',
-        msg.id,
-      );
-      const user = msg.content.match(/\*(.*?)\*/g)?.[0].replace(/\*/g, '');
-      const productName = msg.embeds?.[0]?.fields?.[0]?.name;
-      const imgURL = msg.embeds?.[0]?.image?.url;
-      nodecg().log.debug(
-        '[Media Box] Information parsed from Discord message, '
-          + 'user: %s - productName: %s - imgURL: %s',
-        user,
-        productName,
-        imgURL,
-      );
-      if (user && productName && imgURL) {
-        nodecg().log.debug('[Media Box] Discord message contained all correct info');
-        mb.pushMerchPurchase({ user, productName, imgURL });
-      }
-    }
-  });
-  discord.login(config.discord.token);
-}
 
 /**
  * Check to know if a specified scene has sponsor logos in it or not.

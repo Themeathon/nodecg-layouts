@@ -692,29 +692,6 @@
         "key"
       ]
     },
-    "discord": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "enabled": {
-          "type": "boolean",
-          "default": false
-        },
-        "token": {
-          "type": "string",
-          "default": "BOT_TOKEN"
-        },
-        "textChannelId": {
-          "type": "string",
-          "default": "TEXT_CHANNEL_ID"
-        }
-      },
-      "required": [
-        "enabled",
-        "token",
-        "textChannelId"
-      ]
-    },
     "streamlabsCharity": {
       "type": "object",
       "additionalProperties": false,
@@ -762,7 +739,6 @@
     "flagcarrier",
     "offsite",
     "server",
-    "discord",
     "streamlabsCharity",
     "therungg"
   ]

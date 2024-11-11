@@ -120,11 +120,6 @@ export interface Configschema {
 		address: string;
 		key: string;
 	};
-	discord: {
-		enabled: boolean;
-		token: string;
-		textChannelId: string;
-	};
 	streamlabsCharity: {
 		enabled: boolean;
 		apiUrl: string;
