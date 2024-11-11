@@ -1,6 +1,6 @@
 # themeathon-layouts
 
-> The on-screen graphics used during European Speedrunner Assembly's "marathon" events.
+> The on-screen graphics used during marathon events.
 
 *This is a bundle for [NodeCG](https://nodecg.dev); if you do not understand what that is, we advise you read their website first for more information.*
 
@@ -60,52 +60,6 @@ This can be enabled via the config, controlled via Stream Deck buttons available
 ### Music Player
 
 This bundle can interface with [foobar2000](https://www.foobar2000.org/) using the [beefweb](https://github.com/hyperblast/beefweb) plugin. Set up foobar2000 however you want it to play music (we use a long playlist on shuffle, and set a fade in/out on pause), make sure the correct username/password are set in the configuration fiole, and this bundle with automatically play music when needed. It will only play if the scene name ends in `[M]`, for example, `Intermission [M]`.
-
-## Other Information
-
-### Events Used For
-
-Here's a list of events this bundle has been used at so far, most recent first.
-
-* UKSG Autumn 2021
-* ESA Summer 2021
-* UKSG Summer 2021
-* UKSG Spring 2021
-* ESA Winter 2021
-* UKSG Winter 2021
-* UKSG Autumn 2020
-* ESA Summer 2020
-* UKSG Summer 2020
-* ESA Corona Relief
-* ESA Together
-* UKSG Spring 2020
-* ESA Winter 2020
-* UKSG Winter 2020
-* ESA @ Malmö Vinterspelen 2019
-* ESA @ DreamHack Winter 2019
-* UKSG Autumn 2019
-* ESA Summer 2019 (including some streams on [SpeedGaming](https://www.twitch.tv/speedgaming) during the event).
-* UKSG Summer 2019
-* All BSG's from BSG @Home 2020 onwards (Aug 2020)
-* All Hekathon events from 2021 onwards
-
-### Previous Bundles
-
-Here's a list of previous bundles that used to fulfil the purpose of this one, when we kept making new repositories for most of them.
-
-* [esaw19-layouts](https://github.com/esamarathon/esaw19-layouts)
-  * ESA Winter 2019
-  * ESA @ TwitchCon Europe 2019
-* [esas18-layouts](https://github.com/esamarathon/esas18-layouts)
-  * ESA Summer 2018
-  * UKSG Fall 2018
-  * ESA Movember
-  * UKSG Winter 2019
-  * UKSG Spring 2019
-* [esaw18-layouts](https://github.com/esamarathon/esaw18-layouts)
-  * ESA Winter 2018
-* [esa17-layouts](https://github.com/esamarathon/esa17-layouts)
-  * ESA 2017
 
 ### Credits
 
