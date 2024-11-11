@@ -1,4 +1,4 @@
-import { Configschema } from '@esa-layouts/types/schemas';
+import { Configschema } from '@themeathon-layouts/types/schemas';
 import { DeepWritable } from 'ts-essentials';
 import util from 'util';
 import { get as nodecg } from './nodecg';

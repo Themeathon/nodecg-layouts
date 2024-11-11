@@ -33,8 +33,8 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { Bids, Omnibar } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { Bids, Omnibar } from '@themeathon-layouts/types/schemas';
 import { sortBy } from 'lodash';
 import { Vue, Component } from 'vue-property-decorator';
 import Bid from './components/Bid.vue';

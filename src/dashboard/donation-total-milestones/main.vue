@@ -30,9 +30,9 @@
 </template>
 
 <script lang="ts">
-import { DonationTotal, DonationTotalMilestones } from '@esa-layouts/types/schemas';
+import { DonationTotal, DonationTotalMilestones } from '@themeathon-layouts/types/schemas';
 import { Vue, Component } from 'vue-property-decorator';
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
 import { sortBy } from 'lodash';
 import { storeModule } from './store';
 import Milestone from './components/Milestone.vue';

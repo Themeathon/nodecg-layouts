@@ -31,8 +31,8 @@
 
 <script lang="ts">
 import { Vue, Component, Watch } from 'vue-property-decorator';
-import { DonationReader } from '@esa-layouts/types/schemas';
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
+import { DonationReader } from '@themeathon-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
 
 @Component
 export default class extends Vue {

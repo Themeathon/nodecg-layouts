@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import { IntermissionSlides, Prizes } from '@esa-layouts/types/schemas';
+import { IntermissionSlides, Prizes } from '@themeathon-layouts/types/schemas';
 import { Tracker } from '@shared/types';
 import dayjs from 'dayjs';
 import en from 'dayjs/locale/en-gb';

@@ -67,7 +67,7 @@
 </template>
 
 <script lang="ts">
-import { formatUSD } from '@esa-layouts/graphics/_misc/helpers';
+import { formatUSD } from '@themeathon-layouts/graphics/_misc/helpers';
 import gsap from 'gsap';
 import { Component, Prop, Ref, Vue } from 'vue-property-decorator';
 

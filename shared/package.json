@@ -1,14 +1,14 @@
 {
-  "name": "esa-layouts-shared",
+  "name": "themeathon-layouts-shared",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://github.com/esamarathon/esa-layouts-shared#readme",
+  "homepage": "https://github.com/esamarathon/themeathon-layouts-shared#readme",
   "bugs": {
-    "url": "https://github.com/esamarathon/esa-layouts-shared/issues"
+    "url": "https://github.com/esamarathon/themeathon-layouts-shared/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/esamarathon/esa-layouts-shared.git"
+    "url": "git+https://github.com/esamarathon/themeathon-layouts-shared.git"
   },
   "license": "MIT",
   "author": "zoton2",

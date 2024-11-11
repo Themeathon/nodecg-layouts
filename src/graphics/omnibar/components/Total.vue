@@ -147,11 +147,11 @@
 </template>
 
 <script lang="ts">
-import { replicantModule } from '@esa-layouts/browser_shared/replicant_store';
-import { formatUSD } from '@esa-layouts/graphics/_misc/helpers';
+import { replicantModule } from '@themeathon-layouts/browser_shared/replicant_store';
+import { formatUSD } from '@themeathon-layouts/graphics/_misc/helpers';
 import gsap from 'gsap';
 import { Component, Vue, Watch } from 'vue-property-decorator';
-import { OmnibarMemeImage } from '@esa-layouts/types/schemas';
+import { OmnibarMemeImage } from '@themeathon-layouts/types/schemas';
 
 @Component
 export default class extends Vue {

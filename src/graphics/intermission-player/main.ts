@@ -1,7 +1,7 @@
 /* eslint no-new: off, @typescript-eslint/explicit-function-return-type: off */
 
-import { setUpReplicants } from '@esa-layouts/browser_shared/replicant_store';
-import { UpcomingRunID } from '@esa-layouts/types/schemas';
+import { setUpReplicants } from '@themeathon-layouts/browser_shared/replicant_store';
+import { UpcomingRunID } from '@themeathon-layouts/types/schemas';
 import { SpeedcontrolUtilBrowser } from 'speedcontrol-util';
 import { RunData } from 'speedcontrol-util/types';
 import Vue from 'vue';

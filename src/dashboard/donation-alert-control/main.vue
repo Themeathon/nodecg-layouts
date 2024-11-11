@@ -11,8 +11,8 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { DonationAlerts } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { DonationAlerts } from '@themeathon-layouts/types/schemas';
 import { Component, Vue } from 'vue-property-decorator';
 import Alert from './components/Alert.vue';
 import { storeModule } from './store';

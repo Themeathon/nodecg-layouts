@@ -1,5 +1,5 @@
-import { replicantModule, ReplicantModule, ReplicantTypes } from '@esa-layouts/browser_shared/replicant_store';
-import { IntermissionSlides } from '@esa-layouts/types/schemas';
+import { replicantModule, ReplicantModule, ReplicantTypes } from '@themeathon-layouts/browser_shared/replicant_store';
+import { IntermissionSlides } from '@themeathon-layouts/types/schemas';
 import clone from 'clone';
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';

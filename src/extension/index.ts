@@ -2,11 +2,11 @@
 
 // This must go first so we can use module aliases!
 /* eslint-disable import/first */
-require('module-alias').addAlias('@esa-layouts', require('path').join(__dirname, '.'));
+require('module-alias').addAlias('@themeathon-layouts', require('path').join(__dirname, '.'));
 require('module-alias').addAlias('@shared', require('path').join(__dirname, '../shared'));
 
-import { ExtensionReturn } from '@esa-layouts/types';
-import type { Configschema } from '@esa-layouts/types/schemas/configschema';
+import { ExtensionReturn } from '@themeathon-layouts/types';
+import type { Configschema } from '@themeathon-layouts/types/schemas/configschema';
 import type NodeCGTypes from '@nodecg/types';
 import { set } from './util/nodecg';
 

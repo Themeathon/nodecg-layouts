@@ -58,8 +58,8 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { Commentators } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { Commentators } from '@themeathon-layouts/types/schemas';
 import { Component, Vue } from 'vue-property-decorator';
 import { storeModule } from './store';
 

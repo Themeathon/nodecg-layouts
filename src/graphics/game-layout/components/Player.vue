@@ -140,7 +140,7 @@
           v-if="player.country"
           :key="player.country"
           class="Flag"
-          :src="player.country ? `/bundles/esa-layouts/flags/${player.country}.png` : ''"
+          :src="player.country ? `/bundles/themeathon-layouts/flags/${player.country}.png` : ''"
           :style="{
             position: 'absolute',
             right: '0',
@@ -156,7 +156,7 @@
 </template>
 
 <script lang="ts">
-import { NameCycle } from '@esa-layouts/types/schemas';
+import { NameCycle } from '@themeathon-layouts/types/schemas';
 import fitty, { FittyInstance } from 'fitty';
 import { RunDataActiveRun, RunDataPlayer, RunDataTeam } from 'speedcontrol-util/types';
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator'; // eslint-disable-line object-curly-newline, max-len
@@ -206,7 +206,7 @@ export default class extends Vue {
       };
       img.addEventListener('load', setAsLoaded);
       img.addEventListener('error', setAsLoaded);
-      img.src = `/bundles/esa-layouts/flags/${player.country}.png`;
+      img.src = `/bundles/themeathon-layouts/flags/${player.country}.png`;
     });
   }
 

@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { IntermissionSlides } from '@esa-layouts/types/schemas';
+import { IntermissionSlides } from '@themeathon-layouts/types/schemas';
 import { Component, Vue } from 'vue-property-decorator';
 import { storeModule } from '../store';
 

@@ -103,8 +103,8 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { CurrentRunDelay, ObsData, ServerTimestamp, VideoPlayer } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { CurrentRunDelay, ObsData, ServerTimestamp, VideoPlayer } from '@themeathon-layouts/types/schemas';
 import { Timer } from 'speedcontrol-util/types';
 import { Component, Vue } from 'vue-property-decorator';
 

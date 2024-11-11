@@ -1,4 +1,4 @@
-import { BigbuttonPlayerMap, Configschema } from '@esa-layouts/types/schemas';
+import { BigbuttonPlayerMap, Configschema } from '@themeathon-layouts/types/schemas';
 import { FlagCarrier } from '@esamarathon/mq-events/types';
 import clone from 'clone';
 import { differenceWith } from 'lodash';

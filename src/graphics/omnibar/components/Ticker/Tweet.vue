@@ -37,7 +37,7 @@
 </template>
 
 <script lang="ts">
-import { wait } from '@esa-layouts/graphics/_misc/helpers';
+import { wait } from '@themeathon-layouts/graphics/_misc/helpers';
 import { Vue, Component, Prop, Ref } from 'vue-property-decorator';
 import gsap from 'gsap';
 

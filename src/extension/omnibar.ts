@@ -1,4 +1,4 @@
-import { Bids, DonationTotalMilestones, Omnibar, Prizes } from '@esa-layouts/types/schemas';
+import { Bids, DonationTotalMilestones, Omnibar, Prizes } from '@themeathon-layouts/types/schemas';
 import clone from 'clone';
 import { orderBy } from 'lodash';
 import { join } from 'path';

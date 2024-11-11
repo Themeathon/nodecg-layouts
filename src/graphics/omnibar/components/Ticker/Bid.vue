@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { Bids } from '@esa-layouts/types/schemas';
+import { Bids } from '@themeathon-layouts/types/schemas';
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import Goal from './Bid/Goal.vue';
 import War1v1 from './Bid/War-1v1.vue';

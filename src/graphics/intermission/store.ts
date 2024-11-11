@@ -1,4 +1,4 @@
-import type { Bids, Commentators, DonationReader, IntermissionSlides, MediaBox, MusicData, Prizes, UpcomingRunID } from '@esa-layouts/types/schemas'; // eslint-disable-line object-curly-newline, max-len
+import type { Bids, Commentators, DonationReader, IntermissionSlides, MediaBox, MusicData, Prizes, UpcomingRunID } from '@themeathon-layouts/types/schemas'; // eslint-disable-line object-curly-newline, max-len
 import type NodeCGTypes from '@nodecg/types';
 import clone from 'clone';
 import { SpeedcontrolUtilBrowser } from 'speedcontrol-util';

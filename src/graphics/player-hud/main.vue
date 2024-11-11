@@ -89,8 +89,8 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { DonationsToRead, StreamDeckData } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { DonationsToRead, StreamDeckData } from '@themeathon-layouts/types/schemas';
 import { FlagCarrier } from '@esamarathon/mq-events/types';
 import { Timer } from 'speedcontrol-util/types';
 import { Component, Vue } from 'vue-property-decorator';

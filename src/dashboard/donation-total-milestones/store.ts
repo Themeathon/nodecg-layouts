@@ -1,5 +1,5 @@
-import { replicantModule, ReplicantModule, ReplicantTypes } from '@esa-layouts/browser_shared/replicant_store';
-import { DonationTotalMilestones, Omnibar } from '@esa-layouts/types/schemas';
+import { replicantModule, ReplicantModule, ReplicantTypes } from '@themeathon-layouts/browser_shared/replicant_store';
+import { DonationTotalMilestones, Omnibar } from '@themeathon-layouts/types/schemas';
 import clone from 'clone';
 import { v4 as uuid } from 'uuid';
 import Vue from 'vue';

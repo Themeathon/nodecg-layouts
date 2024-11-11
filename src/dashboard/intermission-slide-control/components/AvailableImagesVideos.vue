@@ -39,9 +39,9 @@
 
 <script lang="ts">
 import NodeCGTypes from '@nodecg/types';
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { IntermissionSlides } from '@esa-layouts/types/schemas';
-import MediaCard from '@esa-layouts/_misc/components/MediaCard.vue';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { IntermissionSlides } from '@themeathon-layouts/types/schemas';
+import MediaCard from '@themeathon-layouts/_misc/components/MediaCard.vue';
 import { v4 as uuid } from 'uuid';
 import { Component, Vue } from 'vue-property-decorator';
 import Draggable from 'vuedraggable';

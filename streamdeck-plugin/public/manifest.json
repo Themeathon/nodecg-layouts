@@ -155,7 +155,7 @@
   "Description": "Plugin with actions programmed for use at ESA Marathons.",
   "Name": "ESA Marathon",
   "Icon": "img/pluginIcon",
-  "URL": "https://github.com/esamarathon/esa-layouts",
+  "URL": "https://github.com/Themeathon/themeathon-layouts",
   "PropertyInspectorPath": "pi.html",
   "DefaultWindowSize": [
     400,

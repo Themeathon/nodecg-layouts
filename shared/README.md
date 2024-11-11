@@ -1,6 +1,6 @@
-# esa-layouts-shared
+# themeathon-layouts-shared
 
-A repository which houses several elements that are used by mutiple [NodeCG](https://nodecg.dev) based bundles for our layouts, [esa-layouts](https://github.com/esamarathon/esa-layouts) for example.
+A repository which houses several elements that are used by mutiple [NodeCG](https://nodecg.dev) based bundles for our layouts, [themeathon-layouts](https://github.com/Themeathon/themeathon-layouts) for example.
 
 **This repository is purposefully designed for our use, and can have breaking changes without prior notice. We advise you don't directly use it in any projects.**
 
@@ -27,7 +27,7 @@ A repository which houses several elements that are used by mutiple [NodeCG](htt
 - You will want to add these paths to your `tsconfig.browser.json` in the `include` array:
   - ```
     "include": [
-      // esa-layouts-shared
+      // themeathon-layouts-shared
       "shared/browser_shared/**/*.ts",
       "shared/browser_shared/**/*.vue",
       "shared/dashboard/**/*.ts",
@@ -60,7 +60,7 @@ A repository which houses several elements that are used by mutiple [NodeCG](htt
 - You will want to add these entries in your `vetur.config.js` in the `projects` section:
   - ```
     projects: [
-      // esa-layouts-shared
+      // themeathon-layouts-shared
       {
         root: './shared/dashboard',
         package: '../../package.json',

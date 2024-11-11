@@ -1,5 +1,5 @@
-import { ReplicantModule, replicantModule, ReplicantTypes } from '@esa-layouts/browser_shared/replicant_store';
-import { Omnibar } from '@esa-layouts/types/schemas';
+import { ReplicantModule, replicantModule, ReplicantTypes } from '@themeathon-layouts/browser_shared/replicant_store';
+import { Omnibar } from '@themeathon-layouts/types/schemas';
 import clone from 'clone';
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';

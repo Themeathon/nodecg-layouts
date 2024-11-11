@@ -62,7 +62,7 @@
 </template>
 
 <script lang="ts">
-import { Commentators, DonationReader } from '@esa-layouts/types/schemas';
+import { Commentators, DonationReader } from '@themeathon-layouts/types/schemas';
 import { Vue, Component, Ref, Prop } from 'vue-property-decorator';
 import { State } from 'vuex-class';
 import fitty, { FittyInstance } from 'fitty';

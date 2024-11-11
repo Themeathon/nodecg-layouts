@@ -1,4 +1,4 @@
-import { Configschema } from '@esa-layouts/types/schemas';
+import { Configschema } from '@themeathon-layouts/types/schemas';
 import type NodeCGTypes from '@nodecg/types';
 
 let nodecg: NodeCGTypes.ServerAPI<Configschema>;

@@ -8,7 +8,7 @@
         v-if="!videos.length"
         :style="{ 'font-style': 'italic' }"
       >
-        Add videos under "Assets" > "esa-layouts" > "Videos".
+        Add videos under "Assets" > "themeathon-layouts" > "Videos".
       </span>
       <template v-else>
         <v-text-field
@@ -74,7 +74,7 @@
 
 <script lang="ts">
 import type NodeCGTypes from '@nodecg/types';
-import { VideoPlayer } from '@esa-layouts/types/schemas';
+import { VideoPlayer } from '@themeathon-layouts/types/schemas';
 import { Component, Vue } from 'vue-property-decorator';
 import { Mutation, State } from 'vuex-class';
 import { PlaylistAdd } from '../store';

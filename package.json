@@ -1,19 +1,22 @@
 {
-  "name": "esa-layouts",
+  "name": "themeathon-layouts",
   "version": "1.0.0",
-  "description": "The on-screen graphics used during European Speedrunner Assembly's \"marathon\" events.",
-  "homepage": "https://github.com/esamarathon/esa-layouts#readme",
+  "description": "The on-screen graphics used during Themeathon events.",
+  "homepage": "https://github.com/Themeathon/themeathon-layouts#readme",
   "bugs": {
-    "url": "https://github.com/esamarathon/esa-layouts/issues"
+    "url": "https://github.com/Themeathon/themeathon-layouts/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/esamarathon/esa-layouts.git"
+    "url": "git+https://github.com/Themeathon/themeathon-layouts.git"
   },
   "license": "MIT",
   "author": "zoton2",
   "contributors": [
-    "BtbN"
+    "BtbN",
+    "Lordmau5",
+    "FreezyLemon",
+    "Jugachi"
   ],
   "scripts": {
     "autofix": "run-s autofix:*",

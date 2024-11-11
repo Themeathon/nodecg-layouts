@@ -17,7 +17,7 @@ module.exports = {
       package: '../../package.json',
     },
 
-    // esa-layouts-shared
+    // themeathon-layouts-shared
     {
       root: './shared/dashboard',
       package: '../../package.json',

@@ -1,4 +1,4 @@
-import { CapturePositions, Configschema } from '@esa-layouts/types/schemas';
+import { CapturePositions, Configschema } from '@themeathon-layouts/types/schemas';
 import Countdown from '@shared/extension/countdown';
 import clone from 'clone';
 import type { DeepWritable } from 'ts-essentials';

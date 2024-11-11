@@ -14,7 +14,7 @@
 </template>
 
 <script lang="ts">
-import { wait } from '@esa-layouts/graphics/_misc/helpers';
+import { wait } from '@themeathon-layouts/graphics/_misc/helpers';
 import { Vue, Component, Prop } from 'vue-property-decorator';
 
 @Component({

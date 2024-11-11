@@ -86,8 +86,8 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { BigbuttonPlayerMap } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { BigbuttonPlayerMap } from '@themeathon-layouts/types/schemas';
 import { FlagCarrier } from '@esamarathon/mq-events/types';
 import { differenceWith } from 'lodash';
 import { RunData, RunDataActiveRun, RunDataArray, RunDataPlayer, Timer } from 'speedcontrol-util/types';

@@ -29,13 +29,13 @@
     "moduleResolution": "node",                          /* Specify how TypeScript looks up a file from a given module specifier. */
     "baseUrl": ".",                                      /* Specify the base directory to resolve non-relative module names. */
     "paths": {
-      "@esa-layouts/*": [
+      "@themeathon-layouts/*": [
         "src/extension/*"
       ],
-      "@esa-layouts/types": [
+      "@themeathon-layouts/types": [
         "src/types"
       ],
-      "@esa-layouts/types/*": [
+      "@themeathon-layouts/types/*": [
         "src/types/*"
       ],
       "@shared/*": [

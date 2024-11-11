@@ -84,9 +84,9 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { formatUSD, wait } from '@esa-layouts/graphics/_misc/helpers';
-import { DonationTotal, DonationTotalMilestones } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { formatUSD, wait } from '@themeathon-layouts/graphics/_misc/helpers';
+import { DonationTotal, DonationTotalMilestones } from '@themeathon-layouts/types/schemas';
 import gsap from 'gsap';
 import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 

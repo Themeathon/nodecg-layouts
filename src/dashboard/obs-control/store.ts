@@ -1,4 +1,4 @@
-import { ReplicantModule, ReplicantTypes } from '@esa-layouts/browser_shared/replicant_store';
+import { ReplicantModule, ReplicantTypes } from '@themeathon-layouts/browser_shared/replicant_store';
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';
 import { getModule, Module, VuexModule } from 'vuex-module-decorators';

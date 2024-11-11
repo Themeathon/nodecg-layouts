@@ -1,4 +1,4 @@
-import { ReplicantModule, ReplicantTypes } from '@esa-layouts/browser_shared/replicant_store';
+import { ReplicantModule, ReplicantTypes } from '@themeathon-layouts/browser_shared/replicant_store';
 import { RunData } from 'speedcontrol-util/types';
 import Vue from 'vue';
 import Vuex, { Store } from 'vuex';

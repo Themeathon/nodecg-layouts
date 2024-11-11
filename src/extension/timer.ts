@@ -1,4 +1,4 @@
-import { BigbuttonPlayerMap } from '@esa-layouts/types/schemas';
+import { BigbuttonPlayerMap } from '@themeathon-layouts/types/schemas';
 import clone from 'clone';
 import * as mqLogging from './util/mq-logging';
 import { get as nodecg } from './util/nodecg';

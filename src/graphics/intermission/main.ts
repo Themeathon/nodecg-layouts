@@ -1,6 +1,6 @@
 /* eslint no-new: off, @typescript-eslint/explicit-function-return-type: off */
 
-import { UpcomingRunID } from '@esa-layouts/types/schemas';
+import { UpcomingRunID } from '@themeathon-layouts/types/schemas';
 import { setUpReplicantsComponent as setUpReplicantsMediabox } from '@shared/graphics/mediabox';
 import { SpeedcontrolUtilBrowser } from 'speedcontrol-util';
 import type { RunData } from 'speedcontrol-util/types';

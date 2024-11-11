@@ -11,9 +11,9 @@ RUN nodecg setup
 # Install latest nodecg-speedcontrol.
 RUN nodecg install speedcontrol/nodecg-speedcontrol
 # Copy over this bundle's files and fully build it.
-WORKDIR /home/node/app/bundles/esa-layouts
+WORKDIR /home/node/app/bundles/themeathon-layouts
 USER root
-RUN chown -R node:node /home/node/app/bundles/esa-layouts
+RUN chown -R node:node /home/node/app/bundles/themeathon-layouts
 USER node
 COPY --chown=node:node package*.json ./
 RUN npm install

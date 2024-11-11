@@ -27,7 +27,7 @@
 </template>
 
 <script lang="ts">
-import { wait } from '@esa-layouts/graphics/_misc/helpers';
+import { wait } from '@themeathon-layouts/graphics/_misc/helpers';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import utc from 'dayjs/plugin/utc';

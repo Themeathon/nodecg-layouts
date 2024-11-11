@@ -1,4 +1,4 @@
-import { Therungg } from '@esa-layouts/types';
+import { Therungg } from '@themeathon-layouts/types';
 import { WebSocket } from 'ws';
 import { get as nodecg } from './util/nodecg';
 

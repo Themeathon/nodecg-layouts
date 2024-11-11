@@ -1,4 +1,4 @@
-import { VideoPlayer } from '@esa-layouts/types/schemas';
+import { VideoPlayer } from '@themeathon-layouts/types/schemas';
 import type NodeCGTypes from '@nodecg/types';
 import Player from '@shared/extension/video-player';
 import { TwitchCommercialTimer } from 'speedcontrol-util/types/schemas';

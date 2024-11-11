@@ -1,4 +1,4 @@
-# esa-layouts
+# themeathon-layouts
 
 > The on-screen graphics used during European Speedrunner Assembly's "marathon" events.
 
@@ -15,8 +15,8 @@ You will need [Node.js](https://nodejs.org) (16.x LTS tested) and [git](https://
 Next, clone the `build` branch of this repository into the NodeCG `bundles` folder and install the dependencies:
 > ```
 > cd bundles
-> git clone https://github.com/esamarathon/esa-layouts.git --branch build
-> cd esa-layouts
+> git clone https://github.com/Themeathon/themeathon-layouts.git --branch themeathon-base
+> cd themeathon-layouts
 > npm install --production
 > ```
 

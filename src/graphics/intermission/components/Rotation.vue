@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts">
-import { IntermissionSlides } from '@esa-layouts/types/schemas';
+import { IntermissionSlides } from '@themeathon-layouts/types/schemas';
 import { Component, Vue } from 'vue-property-decorator';
 import { State } from 'vuex-class';
 import Bid from './Rotation/Bid.vue';

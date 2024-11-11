@@ -92,10 +92,10 @@
 </template>
 
 <script lang="ts">
-import { Bids } from '@esa-layouts/types/schemas';
+import { Bids } from '@themeathon-layouts/types/schemas';
 import { Vue, Component, Prop, Watch } from 'vue-property-decorator';
 import gsap from 'gsap';
-import { formatUSD, wait } from '@esa-layouts/graphics/_misc/helpers';
+import { formatUSD, wait } from '@themeathon-layouts/graphics/_misc/helpers';
 
 @Component
 export default class extends Vue {

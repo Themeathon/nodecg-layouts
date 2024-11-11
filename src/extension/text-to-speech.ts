@@ -1,5 +1,5 @@
-import type { TextToSpeech } from '@esa-layouts/types';
-import type { TtsVoices } from '@esa-layouts/types/schemas';
+import type { TextToSpeech } from '@themeathon-layouts/types';
+import type { TtsVoices } from '@themeathon-layouts/types/schemas';
 import type { Tracker } from '@shared/types';
 import needle from 'needle';
 import { get as nodecg } from './util/nodecg';

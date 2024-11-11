@@ -1,4 +1,4 @@
-import { Configschema } from '@esa-layouts/types/schemas';
+import { Configschema } from '@themeathon-layouts/types/schemas';
 import type { Tracker } from '@shared/types';
 import clone from 'clone';
 import type { NeedleResponse } from 'needle';

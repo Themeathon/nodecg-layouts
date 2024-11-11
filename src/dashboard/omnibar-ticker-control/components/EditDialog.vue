@@ -44,7 +44,7 @@
 <script lang="ts">
 import { Vue, Component, Watch } from 'vue-property-decorator';
 import { VTextarea } from 'vuetify/lib';
-import { Omnibar } from '@esa-layouts/types/schemas';
+import { Omnibar } from '@themeathon-layouts/types/schemas';
 import clone from 'clone';
 import { InputValidationRule } from 'vuetify/types';
 import { storeModule } from '../store';

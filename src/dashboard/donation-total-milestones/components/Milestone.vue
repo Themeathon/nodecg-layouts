@@ -86,9 +86,9 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import MediaCard from '@esa-layouts/dashboard/_misc/components/MediaCard.vue';
-import { DonationTotal, DonationTotalMilestones, Omnibar } from '@esa-layouts/types/schemas';
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
+import MediaCard from '@themeathon-layouts/dashboard/_misc/components/MediaCard.vue';
+import { DonationTotal, DonationTotalMilestones, Omnibar } from '@themeathon-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
 import { storeModule } from '../store';
 
 @Component({

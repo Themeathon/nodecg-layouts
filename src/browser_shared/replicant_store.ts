@@ -1,4 +1,4 @@
-import type { Bids, BigbuttonPlayerMap, Commentators, Countdown, CurrentRunDelay, DonationAlerts, DonationReader, DonationTotal, DonationTotalMilestones, DonationsToRead, GameLayouts, IntermissionSlides, ObsData, Omnibar, OmnibarMemeImage, OtherStreamData, Prizes, ReaderIntroduction, ServerTimestamp, StreamDeckData, TtsVoices, UpcomingRunID, VideoPlayer } from '@esa-layouts/types/schemas';
+import type { Bids, BigbuttonPlayerMap, Commentators, Countdown, CurrentRunDelay, DonationAlerts, DonationReader, DonationTotal, DonationTotalMilestones, DonationsToRead, GameLayouts, IntermissionSlides, ObsData, Omnibar, OmnibarMemeImage, OtherStreamData, Prizes, ReaderIntroduction, ServerTimestamp, StreamDeckData, TtsVoices, UpcomingRunID, VideoPlayer } from '@themeathon-layouts/types/schemas';
 import type NodeCGTypes from '@nodecg/types';
 import clone from 'clone';
 import { SpeedcontrolUtilBrowser } from 'speedcontrol-util';

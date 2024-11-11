@@ -1,4 +1,4 @@
-import type { CapturePositions } from '@esa-layouts/types/schemas';
+import type { CapturePositions } from '@themeathon-layouts/types/schemas';
 import { getZoomAmount } from './helpers';
 
 // eslint-disable-next-line import/prefer-default-export

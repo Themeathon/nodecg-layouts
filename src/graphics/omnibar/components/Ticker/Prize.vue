@@ -22,8 +22,8 @@
 </template>
 
 <script lang="ts">
-import { wait } from '@esa-layouts/graphics/_misc/helpers';
-import { Prizes } from '@esa-layouts/types/schemas';
+import { wait } from '@themeathon-layouts/graphics/_misc/helpers';
+import { Prizes } from '@themeathon-layouts/types/schemas';
 import { Vue, Component, Prop } from 'vue-property-decorator';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';

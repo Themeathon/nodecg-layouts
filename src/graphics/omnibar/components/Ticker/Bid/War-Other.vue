@@ -85,8 +85,8 @@
 </template>
 
 <script lang="ts">
-import { formatUSD, wait } from '@esa-layouts/graphics/_misc/helpers';
-import { Bids } from '@esa-layouts/types/schemas';
+import { formatUSD, wait } from '@themeathon-layouts/graphics/_misc/helpers';
+import { Bids } from '@themeathon-layouts/types/schemas';
 import { Vue, Component, Prop, Ref } from 'vue-property-decorator';
 import gsap from 'gsap';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';

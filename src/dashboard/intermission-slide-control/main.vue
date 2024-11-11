@@ -23,8 +23,8 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { IntermissionSlides } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { IntermissionSlides } from '@themeathon-layouts/types/schemas';
 import clone from 'clone';
 import { Component, Vue, Watch } from 'vue-property-decorator';
 import AvailableImagesVideos from './components/AvailableImagesVideos.vue';

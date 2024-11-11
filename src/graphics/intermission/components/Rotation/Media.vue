@@ -35,7 +35,7 @@
 
 <script lang="ts">
 import type NodeCGTypes from '@nodecg/types';
-import { IntermissionSlides } from '@esa-layouts/types/schemas';
+import { IntermissionSlides } from '@themeathon-layouts/types/schemas';
 import { Component, Prop, Ref, Vue } from 'vue-property-decorator';
 import { State } from 'vuex-class';
 

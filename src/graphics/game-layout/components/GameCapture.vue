@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { CurrentRunDelay, DelayedTimer } from '@esa-layouts/types/schemas';
+import { CurrentRunDelay, DelayedTimer } from '@themeathon-layouts/types/schemas';
 import { RunDataActiveRun, TeamFinishTime } from 'speedcontrol-util/types';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { State } from 'vuex-class';

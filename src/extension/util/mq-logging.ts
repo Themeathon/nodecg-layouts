@@ -1,4 +1,4 @@
-import type { MediaBox } from '@esa-layouts/types/schemas';
+import type { MediaBox } from '@themeathon-layouts/types/schemas';
 import type { NodeCG as mqTypes } from '@esamarathon/mq-events/types';
 import type { RunData } from 'speedcontrol-util/types';
 import mb from './mediabox';

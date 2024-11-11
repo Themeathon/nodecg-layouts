@@ -28,8 +28,8 @@
 </template>
 
 <script lang="ts">
-import { IntermissionSlides } from '@esa-layouts/types/schemas';
-import MediaCard from '@esa-layouts/_misc/components/MediaCard.vue';
+import { IntermissionSlides } from '@themeathon-layouts/types/schemas';
+import MediaCard from '@themeathon-layouts/_misc/components/MediaCard.vue';
 import { v4 as uuid } from 'uuid';
 import { Component, Vue } from 'vue-property-decorator';
 import Draggable from 'vuedraggable';

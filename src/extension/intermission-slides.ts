@@ -1,4 +1,4 @@
-import { IntermissionSlides } from '@esa-layouts/types/schemas';
+import { IntermissionSlides } from '@themeathon-layouts/types/schemas';
 import { Tracker } from '@shared/types';
 import clone from 'clone';
 import { get as nodecg } from './util/nodecg';

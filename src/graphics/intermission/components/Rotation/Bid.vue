@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts">
-import { Bids, IntermissionSlides } from '@esa-layouts/types/schemas';
+import { Bids, IntermissionSlides } from '@themeathon-layouts/types/schemas';
 import { Tracker } from '@shared/types';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { State } from 'vuex-class';

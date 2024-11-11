@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator';
-import { NotableDonations } from '@esa-layouts/types/schemas';
+import { NotableDonations } from '@themeathon-layouts/types/schemas';
 
 @Component
 export default class extends Vue {

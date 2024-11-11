@@ -60,9 +60,9 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import MediaCard from '@esa-layouts/dashboard/_misc/components/MediaCard.vue';
-import { DonationAlerts } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import MediaCard from '@themeathon-layouts/dashboard/_misc/components/MediaCard.vue';
+import { DonationAlerts } from '@themeathon-layouts/types/schemas';
 import type NodeCGTypes from '@nodecg/types';
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { storeModule } from '../store';

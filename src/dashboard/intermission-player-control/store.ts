@@ -1,4 +1,4 @@
-import type { VideoPlayer } from '@esa-layouts/types/schemas';
+import type { VideoPlayer } from '@themeathon-layouts/types/schemas';
 import type NodeCGTypes from '@nodecg/types';
 import clone from 'clone';
 import Vue from 'vue';

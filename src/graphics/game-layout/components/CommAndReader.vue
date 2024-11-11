@@ -94,7 +94,7 @@
 <script lang="ts">
 import { Vue, Component, Watch } from 'vue-property-decorator';
 import { State } from 'vuex-class';
-import { Commentators, DonationReader } from '@esa-layouts/types/schemas';
+import { Commentators, DonationReader } from '@themeathon-layouts/types/schemas';
 import fitty, { FittyInstance } from 'fitty';
 
 @Component

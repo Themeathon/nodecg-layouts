@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import type NodeCGTypes from '@nodecg/types';
-import { VideoPlayer } from '@esa-layouts/types/schemas';
+import { VideoPlayer } from '@themeathon-layouts/types/schemas';
 import { Component, Vue } from 'vue-property-decorator';
 import { State } from 'vuex-class';
 

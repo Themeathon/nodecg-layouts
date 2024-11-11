@@ -80,8 +80,8 @@
 </template>
 
 <script lang="ts">
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { Omnibar } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { Omnibar } from '@themeathon-layouts/types/schemas';
 import clone from 'clone';
 import { v4 as uuid } from 'uuid';
 import { Component, Vue, Watch } from 'vue-property-decorator';

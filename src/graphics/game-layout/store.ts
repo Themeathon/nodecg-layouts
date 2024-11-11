@@ -1,4 +1,4 @@
-import type { Bids, Commentators, CurrentRunDelay, DelayedTimer, DonationReader, GameLayouts, MediaBox, NameCycle, NotableDonations, OmnibarMemeImage, Prizes, TaskmasterTimestamps } from '@esa-layouts/types/schemas'; // eslint-disable-line object-curly-newline, max-len
+import type { Bids, Commentators, CurrentRunDelay, DelayedTimer, DonationReader, GameLayouts, MediaBox, NameCycle, NotableDonations, OmnibarMemeImage, Prizes, TaskmasterTimestamps } from '@themeathon-layouts/types/schemas'; // eslint-disable-line object-curly-newline, max-len
 import type NodeCGTypes from '@nodecg/types';
 import clone from 'clone';
 import { SpeedcontrolUtilBrowser } from 'speedcontrol-util';

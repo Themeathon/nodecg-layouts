@@ -54,7 +54,7 @@
             <img
               v-show="boxartImgSuccess"
               class="BoxArt"
-              :src="`/bundles/esa-layouts/boxart/${run.id}.jpg`"
+              :src="`/bundles/themeathon-layouts/boxart/${run.id}.jpg`"
               @load="boxartImgSuccess = true"
               @error="boxartImgSuccess = false"
             >
@@ -123,8 +123,8 @@
 
 <script lang="ts">
 import type NodeCGTypes from '@nodecg/types';
-import { replicantNS } from '@esa-layouts/browser_shared/replicant_store';
-import { ReaderIntroduction } from '@esa-layouts/types/schemas';
+import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
+import { ReaderIntroduction } from '@themeathon-layouts/types/schemas';
 import MediaBox from '@shared/graphics/mediabox';
 import clone from 'clone';
 import { SpeedcontrolUtilBrowser } from 'speedcontrol-util';
