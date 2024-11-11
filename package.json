@@ -46,9 +46,9 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@fontsource/barlow-condensed": "^4.5.9",
-    "@fontsource/montserrat": "^4.5.14",
-    "@fontsource/roboto": "^4.5.8",
+    "@fontsource/barlow-condensed": "^5",
+    "@fontsource/montserrat": "^5",
+    "@fontsource/roboto": "^5",
     "@mdi/font": "^7.4.47",
     "@nodecg/types": "^2.1.12",
     "@types/express": "^4",
