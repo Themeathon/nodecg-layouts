@@ -21,12 +21,8 @@
         'font-size': '15vh',
       }"
     >
-      <template v-if="therunggMessage">
-        <span :style="{ 'font-size': '0.6em' }">therun.gg Message:</span>
-        {{ therunggMessage }}
-      </template>
       <!-- Tag scanning messages. -->
-      <template v-else-if="tagScanned">
+      <template v-if="tagScanned">
         <template v-if="tagScanned === 'success_comm'">
           <div>✔</div>
           <div>
@@ -89,11 +85,12 @@
 </template>
 
 <script lang="ts">
+import { Vue, Component, Watch } from 'vue-property-decorator';
+import { StreamDeckData, DonationsToRead } from '@themeathon-layouts/types/schemas';
 import { replicantNS } from '@themeathon-layouts/browser_shared/replicant_store';
-import { DonationsToRead, StreamDeckData } from '@themeathon-layouts/types/schemas';
 import { FlagCarrier } from '@esamarathon/mq-events/types';
 import { Timer } from 'speedcontrol-util/types';
-import { Component, Vue } from 'vue-property-decorator';
+import clone from 'clone';
 
 @Component
 export default class extends Vue {
@@ -103,8 +100,7 @@ export default class extends Vue {
   donationsToReadTO = 0;
   tagScanned: 'success_comm' | 'success_player' | 'fail_player' | boolean = false;
   scannedData: FlagCarrier.TagScanned | null = null;
-  messageTimeout!: number;
-  therunggMessage: string | null = null;
+  tagScanTimeout!: number;
 
   get largestDonation(): string {
     return `$${this.donationsToRead
@@ -151,26 +147,15 @@ export default class extends Vue {
         state?: 'success_comm' | 'success_player' | 'fail_player',
         data: FlagCarrier.TagScanned,
       }) => {
-        window.clearTimeout(this.messageTimeout);
-        this.therunggMessage = null;
+        window.clearTimeout(this.tagScanTimeout);
         this.tagScanned = state || true;
         this.scannedData = data;
-        this.messageTimeout = window.setTimeout(() => {
+        this.tagScanTimeout = window.setTimeout(() => {
           this.tagScanned = false;
           this.scannedData = null;
         }, 7000);
       },
     );
-
-    nodecg.listenFor('therunggMessage', (msg: string) => {
-      window.clearTimeout(this.messageTimeout);
-      this.tagScanned = false;
-      this.scannedData = null;
-      this.therunggMessage = msg;
-      this.messageTimeout = window.setTimeout(() => {
-        this.therunggMessage = null;
-      }, 10 * 1000);
-    });
   }
 }
 </script>

@@ -50,7 +50,6 @@ export = (nodecg: NodeCGTypes.ServerAPI<Configschema>): ExtensionReturn => {
   require('./server');
   require('./streamlabs-charity');
   require('./intermission-slides');
-  require('./therungg');
 
   return {
     obs: require('./util/obs').default,

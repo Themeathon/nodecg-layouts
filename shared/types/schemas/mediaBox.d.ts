@@ -29,14 +29,13 @@ export type TypesAll =
 	| 'donation'
 	| 'subscription'
 	| 'cheer'
-	| 'merch'
-	| 'therungg';
+	| 'merch';
 
 export interface MediaBox {
 	rotation: Rotation;
 	rotationApplicable: Rotation;
 	alertQueue: {
-		type: 'donation' | 'subscription' | 'cheer' | 'merch' | 'therungg';
+		type: 'donation' | 'subscription' | 'cheer' | 'merch';
 		id: string;
 		data:
 			| {

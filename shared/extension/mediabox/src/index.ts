@@ -84,17 +84,6 @@ class MediaBox {
       });
     });
 
-    nodecg.listenFor('therunggMessage', (msg: string) => {
-      this.nodecg.log.debug('[Media Box] Received new therun.gg message');
-      this.mediaBox.value.alertQueue.push({
-        type: 'therungg',
-        id: uuid(),
-        data: {
-          msg,
-        },
-      });
-    });
-
     this.update();
     setInterval(() => this.update(), 1000);
   }
@@ -117,7 +106,7 @@ class MediaBox {
    * @param type Type of alert
    */
   private isAlertType(type: MediaBoxType.Types): boolean {
-    return ['donation', 'subscription', 'cheer', 'merch', 'therungg'].includes(type);
+    return ['donation', 'subscription', 'cheer', 'merch'].includes(type);
   }
 
   /**

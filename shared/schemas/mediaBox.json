@@ -11,8 +11,7 @@
         "donation",
         "subscription",
         "cheer",
-        "merch",
-        "therungg"
+        "merch"
       ]
     },
     "rotation": {
@@ -121,8 +120,7 @@
               "donation",
               "subscription",
               "cheer",
-              "merch",
-              "therungg"
+              "merch"
             ]
           },
           "id": {
@@ -206,19 +204,6 @@
                   "user",
                   "productName",
                   "imgURL"
-                ]
-              },
-              {
-                "description": "therun.gg Message",
-                "type": "object",
-                "additionalProperties": false,
-                "properties": {
-                  "msg": {
-                    "type": "string"
-                  }
-                },
-                "required": [
-                  "msg"
                 ]
               }
             ]

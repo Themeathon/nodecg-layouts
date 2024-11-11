@@ -1,5 +1,5 @@
 export namespace MediaBox {
-  type Types = 'image' | 'prize' | 'prize_generic' | 'text' | 'donation' | 'subscription' | 'cheer' | 'merch' | 'therungg';
+  type Types = 'image' | 'prize' | 'prize_generic' | 'text' | 'donation' | 'subscription' | 'cheer' | 'merch';
 
   type ActiveElem = {
     type: Types;

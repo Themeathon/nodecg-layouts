@@ -56,12 +56,6 @@
           class="Slide"
           :vertical="vertical"
         />
-        <therungg-msg
-          v-else-if="type === 8"
-          :key="mediaBox.current.id"
-          class="Slide"
-          :vertical="vertical"
-        />
       </transition>
     </div>
   </div>
@@ -80,7 +74,6 @@ import Prize from './components/Prize.vue';
 import PrizeGeneric from './components/PrizeGeneric.vue';
 import Subscription from './components/Subscription.vue';
 import TextElem from './components/Text.vue';
-import TherunggMsg from './components/TherunggMsg.vue';
 import store from './store';
 
 @Component({
@@ -94,7 +87,6 @@ import store from './store';
     Subscription,
     Cheer,
     Merch,
-    TherunggMsg,
   },
 })
 export default class extends Vue {
@@ -124,8 +116,6 @@ export default class extends Vue {
         return 6;
       case 'merch':
         return 7;
-      case 'therungg':
-        return 8;
       default:
         return -1;
     }
