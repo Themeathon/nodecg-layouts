@@ -31,22 +31,17 @@ export = (nodecg: NodeCGTypes.ServerAPI<Configschema>): ExtensionReturn => {
    * Because of how `import`s work, it helps to use `require`s to force
    * things to be loaded *after* the NodeCG context is set.
    */
-  require('./obs-data');
   require('./layouts');
   require('./tracker');
   require('./misc');
   require('./mixer');
   require('./streamdeck-buttons');
   require('./timer');
-  require('./media-box');
   require('./text-to-speech');
   require('./music');
   require('./intermission-player');
   require('./flagcarrier');
   require('./omnibar');
-  require('./reader-introduction');
-  require('./commercials');
-  require('./player-hud');
   require('./server');
   require('./streamlabs-charity');
   require('./intermission-slides');
