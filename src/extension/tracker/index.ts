@@ -1,7 +1,7 @@
 import { Configschema } from '@themeathon-layouts/types/schemas';
 import type { Tracker } from '@shared/types';
 import clone from 'clone';
-import type { NeedleResponse } from 'needle';
+import type { Cookies } from 'needle';
 import needle from 'needle';
 import { DeepWritable } from 'ts-essentials';
 import { get as nodecg } from '../util/nodecg';
@@ -12,12 +12,12 @@ export const eventInfo: Tracker.EventInfo[] = [];
 const eventConfig = nodecg().bundleConfig.event;
 const config = nodecg().bundleConfig.tracker;
 const { useTestData } = nodecg().bundleConfig;
-let cookies: NeedleResponse['cookies'];
+let cookies: Cookies;
 
 /**
  * Returns tracker cookies, if set.
  */
-export function getCookies(): NeedleResponse['cookies'] {
+export function getCookies(): Cookies {
   return cookies;
 }
 
@@ -120,7 +120,7 @@ async function loginToTracker(): Promise<void> {
     );
 
     // If we're not being redirected or there's no session token, the login failed.
-    if (resp2.statusCode !== 302 || (resp2.cookies && !resp2.cookies.sessionid)) {
+    if (resp2.statusCode !== 302 || !resp2.cookies || !resp2.cookies.sessionid) {
       throw new Error('Log in was unsuccessful, is your username/password correct?');
     }
 
