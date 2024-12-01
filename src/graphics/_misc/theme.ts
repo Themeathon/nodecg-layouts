@@ -19,10 +19,14 @@ const { default: swcf } = require('./themes/swcf.theme.css');
 const { default: nsgspr24 } = require('./themes/nsgspr24.theme.css');
 const { default: themeat24 } = require('./themes/themeat24.theme.css');
 const { default: themeat_hal24 } = require('./themes/themeat-hal24.theme.css');
+const { default: themeat_ww24 } = require('./themes/themeat-ww24.theme.css');
 
-if (theme !== 'themeat-hal24') defaultTheme.use();
+if (theme !== 'themeat-ww24') defaultTheme.use();
 
 switch (theme) {
+  case 'themeat-ww24':
+    themeat_ww24.use();
+    break;
   case 'themeat-hal24':
     themeat_hal24.use();
     break;
