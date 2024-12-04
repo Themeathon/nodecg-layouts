@@ -83,9 +83,6 @@ export interface Configschema {
 		localPort: number;
 		xr18: boolean;
 	};
-	xkeys: {
-		enabled: boolean;
-	};
 	tracker: {
 		enabled: boolean;
 		address: string;

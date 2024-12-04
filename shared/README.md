@@ -54,7 +54,6 @@ A repository which houses several elements that are used by mutiple [NodeCG](htt
       { "path": "./shared/extension/rabbitmq" },
       { "path": "./shared/extension/video-player" },
       { "path": "./shared/extension/x32" },
-      { "path": "./shared/extension/xkeys-esa" }
     ]
     ```
 - You will want to add these entries in your `vetur.config.js` in the `projects` section:

@@ -490,19 +490,6 @@
         "xr18"
       ]
     },
-    "xkeys": {
-      "type": "object",
-      "additionalProperties": false,
-      "properties": {
-        "enabled": {
-          "type": "boolean",
-          "default": true
-        }
-      },
-      "required": [
-        "enabled"
-      ]
-    },
     "tracker": {
       "type": "object",
       "additionalProperties": false,
@@ -697,7 +684,6 @@
     "obs",
     "music",
     "x32",
-    "xkeys",
     "tracker",
     "tts",
     "flagcarrier",

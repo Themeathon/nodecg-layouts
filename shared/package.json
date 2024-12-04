@@ -31,8 +31,7 @@
     "osc": "^2.4.4",
     "string-similarity": "^4.0.4",
     "tiny-typed-emitter": "^2.1.0",
-    "uuid": "^9.0.1",
-    "xkeys": "^2.4.0"
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@esamarathon/mq-events": "^1.0.1",
