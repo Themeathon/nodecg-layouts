@@ -9,29 +9,15 @@
       zoom,
     }"
   >
-    <template v-if="theme === 'swcf'">
-      <img
-        :style="{ 'padding-left': '25px' }"
-        src="../_misc/themes/swcf/OmnibarLogoGGTalentGroup.png"
-      >
-      <img
-        :style="{ 'padding-left': '35px' }"
-        src="../_misc/themes/swcf/OmnibarLogoDoGoodPoints.png"
-      >
-      <div :style="{ 'flex-grow': 1 }" /><!-- Filler div -->
-      <total /><!-- Donation Total -->
-    </template>
-    <template v-else>
-      <img id="Logo"><!-- Logo -->
+    <img id="Logo"><!-- Logo -->
+    <divider />
+    <total /><!-- Donation Total -->
+    <template v-if="theme !== 'themeat24'">
       <divider />
-      <total /><!-- Donation Total -->
-      <template v-if="theme !== 'themeat24'">
-        <divider />
-        <ticker /><!-- Ticker -->
-      </template>
-      <divider />
-      <clock /><!-- Clock -->
+      <ticker /><!-- Ticker -->
     </template>
+    <divider />
+    <clock /><!-- Clock -->
   </div>
 </template>
 
