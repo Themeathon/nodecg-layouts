@@ -6,19 +6,7 @@
     />
     <div id="Layout">
     <!-- Logo -->
-      <img
-        v-if="theme === 'swcf'"
-        class="Fixed"
-        :style="{
-          left: '481px',
-          top: '37px',
-          width: '1064px',
-          height: '414px',
-        }"
-        src="../_misc/themes/swcf/CountdownLogo.png"
-      >
       <div
-        v-else
         class="Logo Fixed"
         :style="{
           left: '53px',
@@ -38,7 +26,6 @@
 
       <!-- Commercial Timer -->
       <commercial-timer
-        v-if="theme !== 'swcf'"
         :style="{
           left: '30px',
           top: '370px',
@@ -49,7 +36,6 @@
 
       <!-- Media Box -->
       <media-box
-        v-if="theme !== 'swcf'"
         vertical
         :font-size="50"
         :style="{
@@ -65,9 +51,9 @@
         class="Fixed"
         :run-data="nextRuns[0]"
         :style="{
-          left: theme === 'swcf' ? '200px' : '718px',
-          top: theme === 'swcf' ? '492px': '31px',
-          width: theme === 'swcf' ? '1520px' : '1172px',
+          left: '718px',
+          top: '31px',
+          width: '1172px',
           height: '199px',
         }"
       />
@@ -75,10 +61,10 @@
       <!-- Rotation -->
       <rotation
         :style="{
-          left: theme === 'swcf' ? '200px' : '718px',
-          top: theme === 'swcf' ? '701px' : '240px',
-          width: theme === 'swcf' ? '1520px' : '1172px',
-          height: theme === 'swcf' ? '199px' : '660px',
+          left: '718px',
+          top: '240px',
+          width: '1172px',
+          height: '660px',
         }"
       />
 
@@ -86,16 +72,16 @@
       <div
         class="BottomBox Fixed Flex"
         :style="{
-          left: theme === 'swcf' ? '200px' : '718px',
+          left: '718px',
           top: '910px',
-          width: theme === 'swcf' ? '1520px' : '1172px',
+          width: '1172px',
           height: '60px',
           'justify-content': 'flex-start',
           'font-size': '30px',
         }"
       >
         <donation-reader />
-        <music-track v-if="theme !== 'swcf'" />
+        <music-track />
       </div>
     </div>
   </div>

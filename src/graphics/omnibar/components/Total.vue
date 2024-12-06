@@ -23,64 +23,7 @@
     <!--<audio ref="SFX">
       <source src="./sfx/mario_coin.mp3" type="audio/mpeg">
     </audio>-->
-    <template v-if="theme === 'swcf'">
-      <!-- Alerts. -->
-      <div
-        class="Flex"
-        :style="{
-            opacity: showAlert ? 1 : 0,
-            transition: 'opacity 0.5s',
-        }"
-      >
-        <img
-          src="./img/CoinFaster.gif"
-          :style="{
-            height: '40px',
-            'image-rendering': 'pixelated',
-            'margin-right': '2px',
-          }"
-        >
-        <span
-          :style="{
-            'font-size': '30px',
-            color: '#7FFF00', // Basic green, no need to use theme
-            'font-weight': 600,
-            'background-color': 'rgba(0,0,0,0.6)',
-            padding: '4px 8px',
-            'border-radius': '10px',
-          }"
-        >
-          +{{ alertText }}
-        </span>
-      </div>
-      <!-- Actual total. -->
-      <div
-        id="Total"
-        class="Flex"
-        :style="{
-          'font-size': '40px',
-          'font-weight': 500,
-          'min-width': '80px',
-          'padding': '0 15px 0 25px',
-        }"
-      >
-        <span
-          v-for="(char, i) in totalStr"
-          :key="i"
-          :class="getClassForChar(char)"
-        >
-          {{ char }}
-        </span>
-      </div>
-      <!-- Charity logo. -->
-      <img
-        id="CharityLogo"
-        :style="{
-          transition: 'opacity 0.5s',
-        }"
-      >
-    </template>
-    <template v-else>
+    <template>
       <div class="Grid" :style="{ 'min-width': '110px' }">
         <!-- Charity logo. -->
         <div class="Flex" :style="{ 'z-index': 0 }">
@@ -188,8 +131,6 @@ export default class extends Vue {
 
   get flexMargin(): string {
     switch (this.theme) {
-      case 'swcf':
-        return '10px';
       case 'themeat24':
         return '0';
       default:

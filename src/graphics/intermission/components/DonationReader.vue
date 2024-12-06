@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="donationReader || (theme == 'swcf' && comms.length)"
+    v-if="donationReader"
     class="Flex DonationReader"
     :style="{ height: '100%' }"
   >
@@ -23,13 +23,7 @@
         padding: '0 15px',
       }"
     >
-      <template v-if="theme === 'swcf'">
-        <span v-for="({ name, pronouns }, i) in comms" :key="i">
-          {{ name }}<span v-if="pronouns" class="Pronouns PronounsComms">
-            {{ pronouns }}</span><template v-if="i < comms.length - 1">,&nbsp;</template>
-        </span>
-      </template>
-      <template v-else>
+      <template>
         {{ name }}
         <div
           v-if="pronouns"
@@ -56,14 +50,6 @@ export default class extends Vue {
   @State readonly commentators!: Commentators;
   @State donationReader!: DonationReader;
   theme = nodecg.bundleConfig.event.theme;
-
-  // For SWCF
-  get comms(): { name: string, pronouns?: string }[] {
-    return this.commentators.map((c) => ({
-      name: c.replace(/\((.*?)\)/g, '').trim(),
-      pronouns: (c.match(/\((.*?)\)/g) || [])[0]?.replace(/[()]/g, ''),
-    }));
-  }
 
   get name(): string | undefined {
     if (!this.donationReader) {
