@@ -5,6 +5,7 @@
 import L_16x9_1p from './16x9-1p.vue';
 import L_16x9_2p_Bingo from './16x9-2p-bingo.vue';
 import L_16x9_2p from './16x9-2p.vue';
+import L_16x9_3p_4x3_1p from './16x9-3p-4x3-1p.vue';
 import L_3DS_1p from './3ds-1p.vue';
 import L_4x3_1p from './4x3-1p.vue';
 import L_4x3_2p from './4x3-2p.vue';
@@ -21,6 +22,7 @@ import L_GBA_2p from './gba-2p.vue';
 export {
   L_16x9_1p,
   L_16x9_2p,
+  L_16x9_3p_4x3_1p,
   L_16x9_2p_Bingo,
   L_3DS_1p,
   L_4x3_1p,
