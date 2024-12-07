@@ -49,6 +49,11 @@ const routes = [
     path: '/16x9-2p',
     component: List.L_16x9_2p,
   },
+  {
+    name: '16:9 3 Player and 4:3 1 Player',
+    path: '/16x9-3p-4x3-1p',
+    component: List.L_16x9_3p_4x3_1p,
+  },
   // {
   //   name: '16:9 2 Player (Bingo)',
   //   path: '/16x9-2p-bingo',
