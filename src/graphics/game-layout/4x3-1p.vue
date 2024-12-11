@@ -5,23 +5,14 @@
       id="GameCapture1"
       class="BorderLeft"
       :style="{
-        left: '668px',
+        // 'border-box' (the default for .Capture) would reduce the actual width/height
+        // by the border-width (3px). To actually get the correct aspect ratio, we need
+        // box-sizing: content-box.
+        'box-sizing': 'content-box',
+        'aspect-ratio': '4/3',
+        left: '587px',
         top: '0px',
-        width: '1252px',
         height: '1000px',
-      }"
-    />
-
-    <!-- Crowd Camera Capture -->
-    <div
-      v-if="!online && crowdCam"
-      id="CameraCaptureCrowd"
-      class="Capture BorderBottom"
-      :style="{
-        left: '0px',
-        top: '0px',
-        width: '668px',
-        height: '114px',
       }"
     />
 
@@ -30,10 +21,12 @@
       id="CameraCapture1"
       class="Capture"
       :style="{
+        'box-sizing': 'content-box',
+        'aspect-ratio': '16/9',
         left: '0px',
-        top: !online && crowdCam ? '114px' : '0px',
-        width: '668px',
-        height: !online && crowdCam ? '262px' : '376px',
+        top: '0px',
+        width: '586px',
+        height: '330px',
       }"
     />
 
@@ -42,9 +35,9 @@
       class="Fixed FlexColumn BorderBottom"
       :style="{
         left: '0px',
-        top: '376px',
-        width: '668px',
-        height: '340px',
+        top: '330px',
+        width: '586px',
+        height: '299px',
       }"
     >
       <player />
@@ -69,22 +62,11 @@
       :font-size="40"
       :style="{
         left: '0px',
-        top: '716px',
-        width: '668px',
-        height: '284px',
+        top: '629px',
+        width: '586px',
+        height: '250px',
       }"
     />
-
-    <!-- Donation Bar -->
-    <!-- <donation-bar
-      class="BorderLeft"
-      :style="{
-        left: '668px',
-        top: '940px',
-        width: '1252px',
-        height: '60px',
-      }"
-    /> -->
   </div>
 </template>
 
